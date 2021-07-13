@@ -15,7 +15,7 @@
         android:layout_marginTop="5dp"
         android:textColor="#ffffff"
         android:textSize="38sp"
-        android:text="Hello World!"
+        android:text=""
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center_vertical|right" />
@@ -23,8 +23,8 @@
     <!-- Division Button -->
     <Button
         android:id="@+id/btnDivision"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="/"
@@ -38,8 +38,8 @@
     <!-- Clear Button -->
     <Button
         android:id="@+id/btnClear"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="C"
@@ -53,8 +53,8 @@
     <!-- Multiply Button -->
     <Button
         android:id="@+id/btnMultiply"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="x"
@@ -68,8 +68,8 @@
     <!-- 9 Button -->
     <Button
         android:id="@+id/btn9"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="9"
@@ -83,8 +83,8 @@
     <!-- 8 Button -->
     <Button
         android:id="@+id/btn8"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="8"
@@ -98,8 +98,8 @@
     <!-- 7 Button -->
     <Button
         android:id="@+id/btn7"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="7"
@@ -113,8 +113,8 @@
     <!-- Subtract Button -->
     <Button
         android:id="@+id/btnSubtract"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="-"
@@ -128,8 +128,8 @@
     <!-- 6 Button -->
     <Button
         android:id="@+id/btn6"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="6"
@@ -143,8 +143,8 @@
     <!-- 5 Button -->
     <Button
         android:id="@+id/btn5"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="5"
@@ -158,8 +158,8 @@
     <!-- 4 Button -->
     <Button
         android:id="@+id/btn4"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="4"
@@ -173,8 +173,8 @@
     <!-- Add Button -->
     <Button
         android:id="@+id/btnAdd"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="+"
@@ -188,8 +188,8 @@
     <!-- 3 Button -->
     <Button
         android:id="@+id/btn3"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="3"
@@ -203,8 +203,8 @@
     <!-- 2 Button -->
     <Button
         android:id="@+id/btn2"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="2"
@@ -218,8 +218,8 @@
     <!-- 1 Button -->
     <Button
         android:id="@+id/btn1"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="1"
@@ -233,8 +233,8 @@
     <!-- Equals Button -->
     <Button
         android:id="@+id/btnEquals"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#FFE5F8"
         android:text="="
@@ -248,8 +248,8 @@
     <!-- Decimal Button -->
     <Button
         android:id="@+id/btnDecimal"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="."
@@ -263,8 +263,8 @@
     <!-- 0 Button -->
     <Button
         android:id="@+id/btn0"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="0"
@@ -278,8 +278,8 @@
     <!-- Negative Button -->
     <Button
         android:id="@+id/btnNegative"
-        android:layout_width="95dp"
-        android:layout_height="95dp"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="+/-"
@@ -289,8 +289,6 @@
         app:layout_constraintTop_toTopOf="@+id/btn0"
         app:layout_constraintRight_toLeftOf="@id/btn0"
         />
-
-
-
+    
 
 </androidx.constraintlayout.widget.ConstraintLayout>
