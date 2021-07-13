@@ -61,70 +61,100 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()){
             case R.id.btn0:
                 clearDisplayedResult();
-                displayContent = displayContent + "0";
-                updateDisplay();
+                calculatorDisplay.setText(calculatorDisplay.getText() + "0");
                 decimalCheck(0);
                 break;
             case R.id.btn1:
                 clearDisplayedResult();
-                displayContent = displayContent + "1";
-                updateDisplay();
+                calculatorDisplay.setText(calculatorDisplay.getText() + "1");
                 decimalCheck(1);
                 break;
             case R.id.btn2:
                 clearDisplayedResult();
-                displayContent = displayContent + "2";
-                updateDisplay();
+                calculatorDisplay.setText(calculatorDisplay.getText() + "2");
                 decimalCheck(2);
                 break;
             case R.id.btn3:
                 clearDisplayedResult();
-                displayContent = displayContent + "3";
-                updateDisplay();
+                calculatorDisplay.setText(calculatorDisplay.getText() + "3");
                 decimalCheck(3);
                 break;
             case R.id.btn4:
                 clearDisplayedResult();
-                displayContent = displayContent + "4";
-                updateDisplay();
+                calculatorDisplay.setText(calculatorDisplay.getText() + "4");
                 decimalCheck(4);
                 break;
             case R.id.btn5:
                 clearDisplayedResult();
-                displayContent = displayContent + "5";
-                updateDisplay();
+                calculatorDisplay.setText(calculatorDisplay.getText() + "5");
                 decimalCheck(5);
                 break;
             case R.id.btn6:
                 clearDisplayedResult();
-                displayContent = displayContent + "6";
-                updateDisplay();
+                calculatorDisplay.setText(calculatorDisplay.getText() + "6");
                 decimalCheck(6);
                 break;
             case R.id.btn7:
                 clearDisplayedResult();
-                displayContent = displayContent + "7";
-                updateDisplay();
+                calculatorDisplay.setText(calculatorDisplay.getText() + "7");
                 decimalCheck(7);
                 break;
             case R.id.btn8:
                 clearDisplayedResult();
-                displayContent = displayContent + "8";
-                updateDisplay();
+                calculatorDisplay.setText(calculatorDisplay.getText() + "8");
                 decimalCheck(8);
                 break;
             case R.id.btn9:
                 clearDisplayedResult();
-                displayContent = displayContent + "9";
-                updateDisplay();
+                calculatorDisplay.setText(calculatorDisplay.getText() + "9");
                 decimalCheck(9);
+                break;
+            case R.id.btnEquals:
+                calculate();
+                num = result;
+                firstCalculation = true;
+                decimalCheck = false;
+                break;
+            case R.id.btnAdd:
+                calculatorDisplay.setText(""); // Clear the text field
+                operator = '+';
+                storeNum();
+                break;
+            case R.id.btnSubtract:
+                calculatorDisplay.setText(""); // Clear the text field
+                operator = '-';
+                storeNum();
+                break;
+            case R.id.btnMultiply:
+                calculatorDisplay.setText("");
+                operator = '*';
+                storeNum();
+                break;
+            case R.id.btnDivision:
+                calculatorDisplay.setText("");
+                operator = '/';
+                storeNum();
+                break;
+            case R.id.btnClear:
+                calculatorDisplay.setText("");
+                num = 0;
+                result = 0;
+                firstCalculation = true;
+                decimalCheck = false;
+                break;
+            case R.id.btnDecimal:
+                int temp = (int) num;
+                String tempString = String.valueOf(temp) + ".";
+                num = Double.parseDouble(tempString);
+                calculatorDisplay.setText(tempString);
+                decimalCheck = true;
+                break;
+            case R.id.btnNegative:
+                num = num * -1;
+                calculatorDisplay.setText(String.valueOf(num));
                 break;
         }
 
-    }
-
-    private void updateDisplay(){
-        calculatorDisplay.setText(displayContent);
     }
 
     /**
@@ -174,8 +204,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (calculatorDisplay.getText().equals("") && Double.parseDouble((String) calculatorDisplay.getText()) == result) {
             // Clear display
-            displayContent = "";
-            updateDisplay();
+            calculatorDisplay.setText("");
         }
 
     }
