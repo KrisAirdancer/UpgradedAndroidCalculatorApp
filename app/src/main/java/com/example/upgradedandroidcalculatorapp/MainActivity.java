@@ -15,9 +15,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView calculatorDisplay;
     private boolean firstCalculation, decimalCheck;
     private Object lastButton;
-    private String displayContent;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,12 +48,46 @@ public class MainActivity extends AppCompatActivity {
         btnEquals = findViewById(R.id.btnEquals);
 
         btn0.setOnClickListener(this::onClick);
-
-
-//        lastButton
+        btn1.setOnClickListener(this::onClick);
+        btn2.setOnClickListener(this::onClick);
+        btn3.setOnClickListener(this::onClick);
+        btn4.setOnClickListener(this::onClick);
+        btn5.setOnClickListener(this::onClick);
+        btn6.setOnClickListener(this::onClick);
+        btn7.setOnClickListener(this::onClick);
+        btn8.setOnClickListener(this::onClick);
+        btn9.setOnClickListener(this::onClick);
+        btnDivision.setOnClickListener(this::onClick);
+        btnMultiply.setOnClickListener(this::onClick);
+        btnSubtract.setOnClickListener(this::onClick);
+        btnAdd.setOnClickListener(this::onClick);
+        btnNegative.setOnClickListener(this::onClick);
+        btnDecimal.setOnClickListener(this::onClick);
+        btnClear.setOnClickListener(this::onClick);
+        btnEquals.setOnClickListener(this::onClick);
     }
 
     public void onClick(View v) {
+
+        /* Prevents the calculator from concatenating the results of two consecutive
+         * calculations that are separated by an equals operator. Acts like the
+         * clear button's operation. */
+//        if (lastButton.equals(R.id.btnEquals) && !v.equals(R.id.btnAdd)
+//                && !v.equals(R.id.btnSubtract) && !v.equals(R.id.btnMultiply)
+//                && !v.equals(R.id.btnDivision) && !v.equals(R.id.btnEquals)) {
+//            calculatorDisplay.setText(""); // Clear display
+//            num = 0;
+//            result = 0;
+//            firstCalculation = true;
+//            decimalCheck = false;
+//        }
+
+        /* Prevents the program from crashing after a DivZero error b/c
+         * the program pulls the "DivZero" string from the text field as
+         * the previous numerical input. */
+        if (calculatorDisplay.getText().equals("DivZero")) {
+            calculatorDisplay.setText("");
+        }
 
         switch (v.getId()){
             case R.id.btn0:
@@ -155,6 +186,8 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
+        lastButton = v.getId();
+
     }
 
     /**
@@ -177,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case '/':
                 if (num == 0) { // Check for division by zero. If so, display error message.
-//                    textArea.setText("DivZero");
+                    calculatorDisplay.setText("DivZero");
                     num = 0;
                     result = 0;
                     return;
@@ -193,7 +226,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         roundResult();
-//        textArea.setText(String.valueOf(result));
+        calculatorDisplay.setText(String.valueOf(result));
     }
 
     /**
@@ -202,7 +235,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void clearDisplayedResult() {
 
-        if (calculatorDisplay.getText().equals("") && Double.parseDouble((String) calculatorDisplay.getText()) == result) {
+        // If display is not empty and a result is displayed, clear it. Otherwise, allow for concatenation of current display value and newly entered value.
+        if (!calculatorDisplay.getText().equals("") && Double.parseDouble((String) calculatorDisplay.getText()) == result) {
             // Clear display
             calculatorDisplay.setText("");
         }
@@ -232,7 +266,7 @@ public class MainActivity extends AppCompatActivity {
             int temp = (int) num;
             String stringTemp = String.valueOf(temp) + "." + value;
             num = Double.parseDouble(stringTemp);
-//            textArea.setText(stringTemp);
+            calculatorDisplay.setText(stringTemp);
             decimalCheck = false;
         } else {
             num = num * 10 + value;
