@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="#F2AEE2">
+    android:background="#F6B4E5">
 
     <!-- Calculator Display screen -->
     <TextView
@@ -30,7 +30,7 @@
         android:text="/"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="#ffffff"
+        android:textColor="#BFA8B9"
         app:layout_constraintTop_toBottomOf="@+id/calculatorDisplay"
         app:layout_constraintRight_toRightOf="parent"
         />
@@ -60,7 +60,7 @@
         android:text="x"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#ffffff"
+        android:textColor="#BFA8B9"
         app:layout_constraintTop_toBottomOf="@+id/btnDivision"
         app:layout_constraintRight_toRightOf="parent"
         />
@@ -120,7 +120,7 @@
         android:text="-"
         android:textSize="45sp"
         android:textStyle="bold"
-        android:textColor="#ffffff"
+        android:textColor="#BFA8B9"
         app:layout_constraintTop_toBottomOf="@+id/btnMultiply"
         app:layout_constraintRight_toRightOf="parent"
         />
@@ -180,7 +180,7 @@
         android:text="+"
         android:textSize="32sp"
         android:textStyle="bold"
-        android:textColor="#ffffff"
+        android:textColor="#BFA8B9"
         app:layout_constraintTop_toBottomOf="@+id/btnSubtract"
         app:layout_constraintRight_toRightOf="parent"
         />
@@ -236,11 +236,11 @@
         android:layout_width="95dp"
         android:layout_height="95dp"
         android:layout_marginRight="5dp"
-        android:backgroundTint="#F9CDEE"
+        android:backgroundTint="#FFE5F8"
         android:text="="
         android:textSize="36sp"
         android:textStyle="bold"
-        android:textColor="#ffffff"
+        android:textColor="#BFA8B9"
         app:layout_constraintTop_toBottomOf="@+id/btnAdd"
         app:layout_constraintRight_toRightOf="parent"
         />
