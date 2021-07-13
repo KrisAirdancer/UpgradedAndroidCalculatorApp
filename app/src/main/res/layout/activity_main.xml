@@ -11,9 +11,8 @@
     <TextView
         android:id="@+id/calculatorDisplay"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="175dp"
         android:layout_marginTop="5dp"
-        android:layout_marginBottom="20dp"
         android:textColor="#ffffff"
         android:textSize="38sp"
         android:text="Hello World!"
@@ -24,16 +23,16 @@
     <!-- Logo Panel -->
     <TextView
         android:id="@+id/logoPanel"
-        android:layout_width="195dp"
+        android:layout_width="150dp"
         android:layout_height="85dp"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="5dp"
         android:background="#C4C4C4"
         android:textColor="#ffffff"
         android:textSize="38sp"
         android:text="LOGO!"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/calculatorDisplay"
+        app:layout_constraintRight_toLeftOf="@id/btnClear"
+        app:layout_constraintTop_toTopOf="@id/btnClear"
         android:gravity="center_vertical|center" />
 
     <!-- Division Button -->
@@ -74,7 +73,7 @@
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="x"
-        android:textSize="32sp"
+        android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="#ffffff"
         app:layout_constraintTop_toBottomOf="@+id/btnDivision"
@@ -126,6 +125,185 @@
         app:layout_constraintRight_toLeftOf="@id/btn8"
         />
 
+    <!-- Subtract Button -->
+    <Button
+        android:id="@+id/btnSubtract"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="-"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultiply"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <!-- 6 Button -->
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="6"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@+id/btnSubtract"
+        app:layout_constraintRight_toLeftOf="@id/btnSubtract"
+        />
+
+    <!-- 5 Button -->
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="5"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@+id/btn6"
+        app:layout_constraintRight_toLeftOf="@id/btn6"
+        />
+
+    <!-- 4 Button -->
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="4"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@+id/btn5"
+        app:layout_constraintRight_toLeftOf="@id/btn5"
+        />
+
+    <!-- Add Button -->
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="+"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubtract"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <!-- 3 Button -->
+    <Button
+        android:id="@+id/btn3"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="3"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@+id/btnAdd"
+        app:layout_constraintRight_toLeftOf="@id/btnAdd"
+        />
+
+    <!-- 2 Button -->
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="2"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@+id/btn3"
+        app:layout_constraintRight_toLeftOf="@id/btn3"
+        />
+
+    <!-- 1 Button -->
+    <Button
+        android:id="@+id/btn1"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="1"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@+id/btn2"
+        app:layout_constraintRight_toLeftOf="@id/btn2"
+        />
+
+    <!-- Equals Button -->
+    <Button
+        android:id="@+id/btnEquals"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="="
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <!-- Decimal Button -->
+    <Button
+        android:id="@+id/btnDecimal"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="."
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@+id/btnEquals"
+        app:layout_constraintRight_toLeftOf="@id/btnEquals"
+        />
+
+    <!-- 0 Button -->
+    <Button
+        android:id="@+id/btn0"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="0"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@+id/btnDecimal"
+        app:layout_constraintRight_toLeftOf="@id/btnDecimal"
+        />
+
+    <!-- Negative Button -->
+    <Button
+        android:id="@+id/btnNegative"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#F9CDEE"
+        android:text="+/-"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        app:layout_constraintTop_toTopOf="@+id/btn0"
+        app:layout_constraintRight_toLeftOf="@id/btn0"
+        />
 
 
 
