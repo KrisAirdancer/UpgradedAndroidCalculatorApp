@@ -4,4 +4,4 @@
  This calculator has increased functionality and usabilty over the tutorial one I built. It is also pink. Because pink is cool.
  
  ## The App
- ![](https://github.com/KrisAirdancer/UpgradedAndroidCalculatorApp/blob/main/Project%20Photos/Screenshot%20of%20App.jpg)
+ ![](https://github.com/KrisAirdancer/UpgradedAndroidCalculatorApp/blob/main/Project%20Photos/Screenshot%20of%20App%20Quarter%20Size.jpg)
