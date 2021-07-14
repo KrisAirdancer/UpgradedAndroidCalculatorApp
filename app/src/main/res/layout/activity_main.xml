@@ -283,7 +283,7 @@
         android:layout_marginRight="5dp"
         android:backgroundTint="#F9CDEE"
         android:text="+/-"
-        android:textSize="32sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#ffffff"
         app:layout_constraintTop_toTopOf="@+id/btn0"
