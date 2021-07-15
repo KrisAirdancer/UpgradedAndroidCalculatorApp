@@ -194,6 +194,9 @@ public class MainActivity extends AppCompatActivity {
         // Set the value of lastButton to the last button that was pressed
         lastButton = v.getId();
 
+        System.out.println("num: " + num);
+        System.out.println("result: " + result);
+
     }
 
     /**
@@ -276,7 +279,11 @@ public class MainActivity extends AppCompatActivity {
             calculatorDisplay.setText(stringTemp);
             decimalCheck = false;
         } else {
-            num = num * 10 + value;
+            System.out.println(num);
+            num = (num * 10) + value;
+//            num *= 100;
+//            num += value;
+//            num /= 100;
         }
     }
 
