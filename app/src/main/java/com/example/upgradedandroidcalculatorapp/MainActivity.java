@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private char operator;
     private TextView calculatorDisplay;
     private boolean firstCalculation, decimalCheck;
-    private Object lastButton;
+    private int lastButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,18 +69,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View v) {
 
+        // Set lastButton was here
+
         /* Prevents the calculator from concatenating the results of two consecutive
          * calculations that are separated by an equals operator. Acts like the
          * clear button's operation. */
-//        if (lastButton.equals(R.id.btnEquals) && !v.equals(R.id.btnAdd)
-//                && !v.equals(R.id.btnSubtract) && !v.equals(R.id.btnMultiply)
-//                && !v.equals(R.id.btnDivision) && !v.equals(R.id.btnEquals)) {
-//            calculatorDisplay.setText(""); // Clear display
-//            num = 0;
-//            result = 0;
-//            firstCalculation = true;
-//            decimalCheck = false;
-//        }
+        if (lastButton == R.id.btnEquals
+                && v.getId() != R.id.btnAdd
+                && v.getId() != R.id.btnSubtract
+                && v.getId() != R.id.btnMultiply
+                && v.getId() != R.id.btnDivision
+                && v.getId() != R.id.btnEquals) {
+            calculatorDisplay.setText("");
+            num = 0;
+            result = 0;
+            firstCalculation = true;
+            decimalCheck = false;
+        }
 
         /* Prevents the program from crashing after a DivZero error b/c
          * the program pulls the "DivZero" string from the text field as
@@ -186,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
+        // Set the value of lastButton to the last button that was pressed
         lastButton = v.getId();
 
     }
@@ -226,6 +232,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         roundResult();
+        clearDisplayedResult();
         calculatorDisplay.setText(String.valueOf(result));
     }
 
@@ -236,10 +243,10 @@ public class MainActivity extends AppCompatActivity {
     public void clearDisplayedResult() {
 
         // If display is not empty and a result is displayed, clear it. Otherwise, allow for concatenation of current display value and newly entered value.
-        if (!calculatorDisplay.getText().equals("") && Double.parseDouble((String) calculatorDisplay.getText()) == result) {
-            // Clear display
-            calculatorDisplay.setText("");
-        }
+//        if (!calculatorDisplay.getText().equals("") && Double.parseDouble((String) calculatorDisplay.getText()) == result) {
+//            // Clear display
+//            calculatorDisplay.setText("");
+//        }
 
     }
 
